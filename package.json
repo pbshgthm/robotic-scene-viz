@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && vite build --base=/robotic-scene-viz/",
     "preview": "vite preview"
   },
   "dependencies": {

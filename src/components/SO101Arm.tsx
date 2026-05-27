@@ -4,8 +4,9 @@ import * as THREE from "three";
 import URDFLoader from "urdf-loader";
 import type { URDFRobot } from "urdf-loader";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
+import { assetUrl } from "../assetUrl";
 
-const URDF_URL = "/so-101/so101.urdf";
+const URDF_URL = assetUrl("so-101/so101.urdf");
 type MeshMaterialWithColor = THREE.Material & {
   color?: THREE.Color;
   map?: THREE.Texture | null;

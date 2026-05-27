@@ -2,22 +2,23 @@ import { useLoader } from "@react-three/fiber";
 import { useMemo } from "react";
 import * as THREE from "three";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
+import { assetUrl } from "../assetUrl";
 import { TABLE } from "./Table";
 
 const MM_TO_M = 0.001;
 const TRACK_CENTER_OFFSET: Point2 = [-0.083, 0.286];
 
 const TRACK_URLS = {
-  straight: "/track/straight-150mm.stl",
-  curve45: "/track/curve-45-flat.stl",
+  straight: assetUrl("track/straight-150mm.stl"),
+  curve45: assetUrl("track/curve-45-flat.stl"),
 } as const;
 
 const TOWER_URLS = {
-  base: "/track/tower-base.stl",
-  section150: "/track/tower-section-150mm.stl",
-  section100: "/track/tower-section-100mm.stl",
-  section50: "/track/tower-section-50mm.stl",
-  top: "/track/tower-top-plate.stl",
+  base: assetUrl("track/tower-base.stl"),
+  section150: assetUrl("track/tower-section-150mm.stl"),
+  section100: assetUrl("track/tower-section-100mm.stl"),
+  section50: assetUrl("track/tower-section-50mm.stl"),
+  top: assetUrl("track/tower-top-plate.stl"),
 } as const;
 
 type TrackModel = keyof typeof TRACK_URLS;
